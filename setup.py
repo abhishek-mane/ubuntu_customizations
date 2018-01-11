@@ -1,7 +1,4 @@
-import              \
-    bash,           \
-    logger
+from src import apply
 
-
-logger.initialize()
-bash.initialize()
+# Apply all customizations
+apply()

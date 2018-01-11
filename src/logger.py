@@ -4,7 +4,7 @@
 
 import logging.config
 import logging as logger
-
+from colors import COLORS
 
 def initialize():
     logging.config.dictConfig({
@@ -29,5 +29,5 @@ def initialize():
     })
 
 
-def log(head, msg):
-    logger.info(head + ' : ' + msg)
+def Print(head, msg):
+    logger.info("%s%s[%s] : %s%s" % (COLORS.On_White, COLORS.Yellow, head, msg, COLORS.RESET))
