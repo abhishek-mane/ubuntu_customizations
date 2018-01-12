@@ -13,7 +13,8 @@ FILENAME = 'TEMPBASH'
 HOME_DIR = os.environ['HOME']
 PREREQ_PACKAGES = [
     'git',
-    'toilet'
+    'toilet',
+    'quote'
 ]
 
 

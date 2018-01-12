@@ -21,5 +21,8 @@ CWD="\[\033[1;36m\]\W"
 DOLLER="$RS$ "
 PS1="${debian_chroot:+($debian_chroot)}[$USERNAME$AT$HOSTNAME$RS]$SEMICOLON$CWD\`get_git_branch\`$DOLLER"
 
-# Timestamp on terminal start
-date "+%d %B %r" | toilet -f term -F border --gay
+# local bin
+LOCAL_BIN="$HOME/.bin"
+
+# Timestamp on terminal
+$LOCAL_BIN/quote | toilet -f term --gay
