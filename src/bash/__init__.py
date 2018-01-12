@@ -9,7 +9,7 @@ Print = config.Print
 installPkg = config.apt.installPkg
 
 # Globals
-FILENAME = 'TEMPBASH'
+FILENAME = '.bashrc'
 HOME_DIR = os.environ['HOME']
 PREREQ_PACKAGES = [
     'git',
