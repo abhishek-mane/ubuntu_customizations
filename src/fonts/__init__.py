@@ -37,7 +37,7 @@ def loadInstalledFonts():
     os.system('fc-cache -f -v')
 
 
-def installFonts():
+def install():
     Print(__name__, 'Checking fonts directory...')
     createFontsDirectory()
 

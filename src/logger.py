@@ -30,4 +30,4 @@ def initialize():
 
 
 def Print(head, msg):
-    logger.info("%s%s[%s] : %s%s" % (COLORS.On_White, COLORS.Yellow, head, msg, COLORS.RESET))
+    logger.info("%s[%s] : %s%s" % (COLORS.HEADINGS, head, msg, COLORS.RESET))

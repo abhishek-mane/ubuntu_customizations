@@ -20,9 +20,13 @@ CURRENT_DIR = path.dirname(path.abspath(
 SCRIPTS_DIR = path.join(CURRENT_DIR, 'scripts')
 
 
-def installFromRemote(pkg):
+def installFromRemote(arg):
     COMMAND = "sudo apt-get install %s -y"
-    os.system(COMMAND % (pkg))
+    if(type(arg) == type([])):
+        Print(__name__, 'Installing packages => [ %s ]' % (','.join(arg)))
+        os.system(COMMAND % (' '.join(arg)))
+        return
+    os.system(COMMAND % (arg))
 
 
 def installFromLocal(pkg):
@@ -39,7 +43,7 @@ def installFromLocal(pkg):
 
 
 def install(pkg):
-    Print(__name__, 'Installing package %s...' % (pkg))
+    Print(__name__, 'Installing package => [ %s ]' % (pkg))
     if(scripts.exist(pkg)):
         installFromLocal(pkg)
         return

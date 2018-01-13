@@ -24,3 +24,6 @@ class COLORS:
     On_White    = "\033[47m"
     # Reset colors
     RESET       = "\033[0m"
+
+    # TESTING
+    HEADINGS  = "\033[45;37m"

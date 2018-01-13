@@ -8,6 +8,16 @@ def installPkg(pkg):
     install(pkg)
 
 
+def installPkgs(listOfPkgs):
+    from install import installFromRemote
+    installFromRemote(listOfPkgs)
+
+
 def updateSources():
     from update import update
     update()
+
+
+def addPPA(ppa):
+    from ppa import add
+    add(ppa)
