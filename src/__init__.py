@@ -17,10 +17,10 @@ def apply():
     apt.updateSources()
 
     # # Bash customization
-    bash.initialize()
+    # bash.initialize()
 
     # Install fonts
-    fonts.install()
+    # fonts.install()
 
     # Install my fav apps
     fav_apps.install()

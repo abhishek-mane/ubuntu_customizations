@@ -21,6 +21,9 @@ CWD="\[\033[1;36m\]\W"
 DOLLER="$RS$ "
 PS1="${debian_chroot:+($debian_chroot)}[$USERNAME$AT$HOSTNAME$RS]$SEMICOLON$CWD\`get_git_branch\`$DOLLER"
 
+# Synaptics touchpad tap-to-click is not working (issue)
+synclient TapButton1=1 TapButton2=3 TapButton3=2
+
 # local bin
 LOCAL_BIN="$HOME/.bin"
 

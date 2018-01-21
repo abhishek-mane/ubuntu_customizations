@@ -8,7 +8,7 @@ import config
 # define print function
 Print = config.Print
 
-COMMAND = "sudo apt-get update"
+COMMAND = "sudo apt update"
 
 def update():
     Print(__name__, 'Updating sources...')

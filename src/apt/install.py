@@ -21,7 +21,7 @@ SCRIPTS_DIR = path.join(CURRENT_DIR, 'scripts')
 
 
 def installFromRemote(arg):
-    COMMAND = "sudo apt-get install %s -y"
+    COMMAND = "sudo apt install %s -y"
     if(type(arg) == type([])):
         Print(__name__, 'Installing packages => [ %s ]' % (','.join(arg)))
         os.system(COMMAND % (' '.join(arg)))
