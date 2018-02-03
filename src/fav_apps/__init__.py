@@ -23,6 +23,7 @@ PKGS = [
     'fluxgui',
 
     # From main sources
+    'menulibre',
     'tree',
     'build-essential',
     'filezilla',
@@ -60,7 +61,6 @@ def install():
     addPPAs()
     refreshSources()
     installPackages()
-
 
 
 # To be accomodate

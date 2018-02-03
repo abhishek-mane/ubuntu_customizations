@@ -7,7 +7,7 @@ get_git_branch()
 	branch=$(git branch 2>/dev/null | sed -n "s/* \(.*\)/\1/p")
 	if [ ! $branch == "" ]
 	then
-		printf "\033[0m <|\e[33m\e[1m$branch\033[0m|> "
+		printf " <|$branch|> "
 	else
 		echo ""
 	fi
@@ -19,7 +19,7 @@ HOSTNAME="\[\033[1;35m\]\h"
 SEMICOLON="$RS:"
 CWD="\[\033[1;36m\]\W"
 DOLLER="$RS$ "
-PS1="${debian_chroot:+($debian_chroot)}[$USERNAME$AT$HOSTNAME$RS]$SEMICOLON$CWD\`get_git_branch\`$DOLLER"
+PS1="${debian_chroot:+($debian_chroot)}[$USERNAME$AT$HOSTNAME$RS]$SEMICOLON$CWD\[\e[33m\e[1m\]\`get_git_branch\`$DOLLER"
 
 # Synaptics touchpad tap-to-click is not working (issue)
 synclient TapButton1=1 TapButton2=3 TapButton3=2
